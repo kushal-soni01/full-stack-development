@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 3%;
+    grid-template-areas:
+        "box1 box2 box3 box4"
+        "box5 box6 box7 box8"
+        "box9 box10 box11 box12";
+}
+
+.box {
+    background-color: aqua;
+    min-height: 100px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-areas:
+            "box1 box2 box3 "
+            "box5 box6 box7 "
+            "box9 box10 box11"
+            "box4 box8 box12";
+    }
+}

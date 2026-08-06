@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 3%;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-areas:
+                "panel1 panel1 panel1"
+                "panel2 panel3 panel3"
+                "panel2 panel3 panel3"
+                "panel2 panel4 panel5"
+                "panel6 panel6 panel6"
+            ;
+
+            div {
+                min-height: 100px;
+                background-color: maroon;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" style="grid-area: panel1"></div>
+        <div class="sidebar" style="grid-area: panel2"></div>
+        <div class="main-content" style="grid-area: panel3"></div>
+        <div class="card1" style="grid-area: panel4"></div>
+        <div class="card2" style="grid-area: panel5"></div>
+        <div class="footer" style="grid-area: panel6"></div>
+    </div>
+</body>
+
+</html>
