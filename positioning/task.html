@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --rgb: 0 105 168;
+        }
+
+        body {
+            background-color: #232323;
+        }
+
+        h1 {
+            color: slategrey;
+            text-align: center;
+            margin: auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            outline: none;
+            text-shadow:
+                0 2ex rgb(var(--rgb) / 0.35),
+                0 -2ex rgb(var(--rgb) / 0.35),
+                0 4ex rgb(var(--rgb) / 0.15),
+                0 -4ex rgb(var(--rgb) / 0.15),
+                0 6ex rgb(var(--rgb) / 0.075),
+                0 -6ex rgb(var(--rgb) / 0.075);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        .card {
+            height: 80vh;
+            width: 80vw;
+            margin: 10vh;
+            border-radius: 20px;
+            position: sticky;
+            top: 10%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Car's Collections</h1>
+    <div class="container">
+        <div class="card" id="card2">
+            <img src="cars_3_characters-2.avif" alt="">
+        </div>
+        <div class="card" id="card1">
+            <img src="cars_3_characters-19.avif" alt="">
+        </div>
+        <div class="card" id="card3">
+            <img src="images (1).jfif" alt="">
+        </div>
+        <div class="card" id="card4">
+            <img src="images.jfif" alt="">
+        </div>
+        <div class="card" id="card5">
+            <img src="pixar-character-lightning-mcqueen-from-the-film-cars-in-a-pixar-character-KWEXA2.jpg" alt="">
+        </div>
+        <div class="card" id="card6">
+            <img src="f24d45c5fd1ed172084a58ff0749b2be.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
