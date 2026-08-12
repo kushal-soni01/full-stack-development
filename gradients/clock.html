@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .circle {
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #circle1 {
+            height: 650px;
+            width: 650px;
+            background: conic-gradient(#500d0d, #e08a8a, #fff, #d4d4d4);
+        }
+
+        #circle2 {
+            height: 500px;
+            width: 500px;
+            background: conic-gradient(#0d4450, #8ad6e0, #fff, #989797);
+        }
+
+        #circle3 {
+            height: 350px;
+            width: 350px;
+            background: conic-gradient(#47500d, #cce08a, #fff, #414141);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+    </div>
+    <script>
+        const circle1 = document.querySelector('#circle1');
+        const circle2 = document.querySelector('#circle2');
+        const circle3 = document.querySelector('#circle3');
+
+        // console.log(circle1);
+        // console.log(circle2);
+        // console.log(circle3);
+
+
+        setInterval(() => {
+            const time = new Date();
+            const hours = time.getHours();
+            const minutes = time.getMinutes();
+            const seconds = time.getSeconds();
+            const milliseconds = time.getMilliseconds();
+            // log(time.getSeconds())
+            const secondDeg = seconds * 6 + milliseconds * 6 / 1000;
+            const minuteDeg = minutes * 6 + secondDeg / 60;
+            const hourDeg = (hours % 12) * 30 + minutes * 0.5 + minuteDeg / 12;
+
+            // console.log(hourDeg);
+            // console.log(minuteDeg);
+            // console.log(secondDeg);
+
+            circle1.style.background = `conic-gradient(from ${hourDeg}deg, #500d0d, #e08a8a, #fff, #d4d4d4)`;
+            circle2.style.background = `conic-gradient(from ${minuteDeg}deg, #0d4450, #8ad6e0, #fff, #989797)`;
+            circle3.style.background = `conic-gradient(from ${secondDeg}deg, #47500d, #cce08a, #fff, #414141)`;
+        }, 1);
+    </script>
+</body>
+
+</html>
