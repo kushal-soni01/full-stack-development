@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        section h1 {
+            color: red;
+        }
+
+        section>h1 {
+            text-decoration: underline;
+        }
+
+        h1+p {
+            color: blue;
+        }
+
+        h1~p {
+            font-size: 30px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            border-radius: 20px;
+            border: 2px solid none;
+        }
+
+        button:focus {
+            background-color: blueviolet;
+        }
+
+        button:active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <h1>CSS Selectors</h1>
+        <p class="para">This is class Selector</p>
+        <p id="para">This is ID Selector</p>
+        <div>
+            <h1>Heading</h1>
+        </div>
+
+        <button>Full Stack</button>
+
+        <input type="checkbox">
+        <input type="checkbox">
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </section>
+</body>

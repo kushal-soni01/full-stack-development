@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - pseudoClasses</title>
+    <style>
+        input {
+            border-width: 0px 0px 6px 10px;
+            border-color: black;
+            display: block;
+            margin-top: 3%;
+            font-size: 25px;
+        }
+
+        input:required {
+            border-color: red;
+        }
+
+        input:optional {
+            border-color: yellow;
+        }
+
+        input:required:valid {
+            border-color: green;
+        }
+
+        input:required:invalid {
+            border-color: red;
+        }
+
+        input:in-range {
+            background-color: bisque;
+        }
+
+        input:out-of-range {
+            background-color: red;
+        }
+
+        li:nth-child(3n) {
+            background-color: green;
+            color: red;
+        }
+
+        li:not(:nth-child(3n)) {
+            background-color: red;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Second Name" optional>
+        <input type="text" placeholder="Third Name" required>
+
+        <input type="email" placeholder="Email" required>
+        <input type="number" placeholder="18" min="18" max="90">
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </form>
+</body>
+
+</html>
