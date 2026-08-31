@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .login-contain {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(147, 74, 74);
+        }
+
+        .container {
+            min-width: 40vw;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            background-color: aquamarine;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: inset 0px 0px 20px black;
+        }
+
+        .login {
+            min-width: 30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            margin: 10px;
+            width: 30vw;
+            height: 50px;
+            padding: 10px;
+            border: 2px solid beige;
+            border-radius: 10px;
+            font-size: 30px;
+            transition: all 0.3s linear;
+        }
+
+        input:hover {
+            box-shadow: 3px 3px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-contain">
+        <div class="container">
+            <h2 style="font-size: 64px;">Login</h2>
+            <div class="login">
+                <div class="name">
+                    <label for="username"></label>
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="password">
+                    <label for="pass"></label>
+                    <input type="password" name="pass" placeholder="Password">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
