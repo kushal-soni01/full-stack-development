@@ -18,7 +18,7 @@
 
 ## 📖 About
 
-This repository is a collection of **practical exercises and mini-projects** built while learning full-stack web development. Each folder focuses on a specific CSS/HTML/JS concept, progressing from fundamentals to more advanced techniques like CSS Grid layouts, conic-gradient clocks, and dashboard UIs.
+This repository is a collection of **practical exercises and mini-projects** built while learning full-stack web development. Each folder focuses on a specific CSS/HTML/JS concept, progressing from fundamentals to more advanced techniques like CSS Grid layouts, conic-gradient clocks, flexbox dashboards, CSS selectors, typography, and dashboard UIs.
 
 ## 🗂️ Project Structure
 
@@ -27,11 +27,15 @@ Full-stack/
 │
 ├── task1-2/          🔐 Login Card & Navbar
 ├── task3/            🛒 Product Cards (Flexbox)
-├── task4/            📊 Admin Dashboard
+├── task4/            📊 Admin Dashboard (CSS Grid)
+├── flex-box/         📐 Flexbox Deep Dive & Dashboard
 ├── bento/            🍱 Bento Grid Layouts
 ├── box-shadow/       🌑 Box Shadow & Text Shadow
 ├── gradients/        🎨 CSS Gradients & Animated Clock
 ├── positioning/      📌 CSS Positioning & Sticky Cards
+├── selectors/        🎯 CSS Selectors & Pseudo-classes
+├── outline_float/    📰 Outline, Float & Newspaper Layout
+├── typography/       🔤 Google Fonts & Typography
 └── DOM/              🧩 DOM Manipulation & Styling
 ```
 
@@ -80,6 +84,31 @@ Full-stack/
 | **CSS Nesting** | Modern CSS nesting for scoped styles |
 
 **Files:** `index.html` · `style.css`
+
+---
+
+### 📐 Flex-box — Flexbox Deep Dive & Dashboard
+
+> Three exercises exploring Flexbox fundamentals, interactive login cards, flex grow/shrink/basis properties, and a full Flexbox-powered admin dashboard.
+
+#### 🔐 Login Card (`index.html`)
+A centered login card using `display: flex` with column direction and smooth transition hover effects on the container and inputs.
+
+#### 🧪 Flex Playground (`play.html`)
+Interactive Flexbox sandbox demonstrating `flex-grow`, `flex-shrink`, and `flex-basis` properties side by side on three colored boxes.
+
+#### 📊 Flexbox Admin Dashboard (`task.html`)
+A full admin dashboard rebuilt with **Flexbox** — dark sidebar with Font Awesome icons, blue header with user profile, stat cards for Users / Products / Orders / Revenue, and a styled data table with alternating row colors.
+
+| Concept | Details |
+|---------|---------|
+| **Flex Direction** | Column sidebar + row main content layout |
+| **flex-grow / shrink / basis** | Dynamic box sizing with shorthand `flex` property |
+| **Font Awesome Icons** | CDN-loaded icons in sidebar and stat cards |
+| **CSS Nesting** | Deeply nested modern CSS for scoped component styles |
+| **Hover Transitions** | Smooth nav-link hover background effects |
+
+**Files:** `index.html` · `play.html` · `task.html`
 
 ---
 
@@ -168,6 +197,66 @@ A scrollable **Cars Collection** gallery where image cards stack on top of each 
 
 ---
 
+### 🎯 Selectors — CSS Selectors & Pseudo-classes
+
+> Two exercises covering CSS combinators, state pseudo-classes, and form validation pseudo-classes.
+
+#### CSS Combinators (`index.html`)
+Hands-on demo of descendant (` `), child (`>`), adjacent sibling (`+`), and general sibling (`~`) selectors alongside `:hover`, `:focus`, and `:active` interaction states.
+
+#### 📋 Form Pseudo-classes (`form-psedo.html`)
+A form where fields visually respond to `:required`, `:optional`, `:valid`, `:invalid`, `:in-range`, and `:out-of-range` states. Also demonstrates `:nth-child()` and `:not()` for pattern-based list styling.
+
+| Concept | Details |
+|---------|---------|
+| **Combinator Selectors** | Descendant, child, adjacent & general sibling |
+| **State Pseudo-classes** | `:hover`, `:focus`, `:active` on interactive elements |
+| **Form Validation** | `:required`, `:optional`, `:valid`, `:invalid` |
+| **Range Validation** | `:in-range`, `:out-of-range` for number inputs |
+| **Structural** | `:nth-child()` and `:not()` for pattern-based styling |
+
+**Files:** `index.html` · `form-psedo.html`
+
+---
+
+### 📰 Outline & Float — Float Layout & Newspaper Design
+
+> Two exercises practicing CSS `outline` vs `border` and `float`-based layouts including a classic newspaper-style page.
+
+#### Float with Outline (`index.html`)
+Full-viewport card outlined with `outline: 10px solid blue` — demonstrating how `outline` sits outside the box model. An image is floated right with text wrapping around it.
+
+#### 🗞️ Newspaper Layout (`newspaper.html`)
+Classic newspaper-style header layout with a floated image inside an article section — illustrating float-based editorial web design.
+
+| Concept | Details |
+|---------|---------|
+| **CSS Outline** | `outline` vs `border` — sits outside the box model |
+| **Float Right** | Image floated right with automatic text wrap-around |
+| **Newspaper Layout** | Header + article body using float-based composition |
+
+**Files:** `index.html` · `newspaper.html`
+
+---
+
+### 🔤 Typography — Google Fonts & Font Properties
+
+> An in-depth exploration of Google Fonts and CSS typography properties across five font families.
+
+Five test divs each using a different Google Font or system font stack — **Ubuntu**, **Lucida Sans**, **Black Ops One**, **Dancing Script**, and **Caveat** — tuned with `font-size-adjust` and `font-stretch` to compare visual weight, x-height, and rhythm.
+
+| Concept | Details |
+|---------|---------|
+| **Google Fonts** | `@import` of Ubuntu, Black Ops One, Dancing Script, Caveat |
+| **font-size-adjust** | Preserves x-height ratio when fallback fonts kick in |
+| **font-stretch** | Expanded/condensed glyph variants |
+| **Font Stacks** | Graceful fallback chains for each font family |
+| **Form Styling** | Input fields with border-radius and custom font rendering |
+
+**Files:** `index.html`
+
+---
+
 ### 🧩 DOM — Document Object Model
 
 > A styled page demonstrating DOM structure with Google Fonts integration, floating images, and text layout.
@@ -202,22 +291,38 @@ A scrollable **Cars Collection** gallery where image cards stack on top of each 
       <br><strong>JavaScript</strong>
       <br><sub>DOM & Interactivity</sub>
     </td>
+    <td align="center" width="120">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="48" height="48" alt="Google Fonts" />
+      <br><strong>Google Fonts</strong>
+      <br><sub>Typography</sub>
+    </td>
+    <td align="center" width="120">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fontawesome/fontawesome-original.svg" width="48" height="48" alt="Font Awesome" />
+      <br><strong>Font Awesome</strong>
+      <br><sub>Icon Library</sub>
+    </td>
   </tr>
 </table>
 
 ## 🧠 Key Concepts Covered
 
 ```
-✅ Flexbox (centering, wrapping, alignment)
+✅ Flexbox (centering, wrapping, grow/shrink/basis, column layouts)
 ✅ CSS Grid (template areas, auto-fit, minmax)
 ✅ CSS Positioning (static, relative, absolute, fixed, sticky)
 ✅ Box Shadows & Text Shadows
+✅ CSS Outlines (vs border — outside the box model)
+✅ CSS Float (image wrap, newspaper-style layouts)
 ✅ CSS Gradients (linear, conic)
 ✅ CSS Variables (custom properties)
 ✅ CSS Nesting (modern syntax)
+✅ CSS Selectors (combinators, pseudo-classes, :nth-child, :not)
+✅ Form Validation Pseudo-classes (:required, :valid, :in-range…)
 ✅ Responsive Design (@media queries)
-✅ DOM Manipulation (querySelector, setInterval)
+✅ Typography (font-size-adjust, font-stretch, font stacks)
 ✅ Google Fonts Integration
+✅ Font Awesome Icons (CDN)
+✅ DOM Manipulation (querySelector, setInterval)
 ```
 
 ## 🚀 Getting Started
