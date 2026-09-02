@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 16%;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            font-size: 1.5em;
+
+            .title {
+                margin-bottom: 8%;
+            }
+
+            li {
+                border-radius: 20px;
+                padding: 8px;
+                margin: 30px 10px;
+                list-style: none;
+                transition: all 0.4s ease;
+            }
+
+            li:hover {
+                background-color: #6f6f7c;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                margin-left: 10px;
+                font-weight: lighter;
+                font-size: 0.7em;
+            }
+        }
+
+        .main {
+            width: 84%;
+            height: 100vh;
+            background-color: #fff;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #131577;
+                color: whitesmoke;
+                height: 11%;
+
+                .title {
+                    font-size: 1.5em;
+                }
+
+                .profile {
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    i {
+                        font-size: 1.5em;
+                    }
+
+                    .user {
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            .cards {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+
+                .card {
+                    width: 20%;
+                    height: 250px;
+                    background-color: #CECECE;
+                    color: black;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+
+                    i {
+                        font-size: 3.5em;
+                        margin-bottom: 20px;
+                        color: #131577;
+                    }
+
+                    p {
+                        font-size: 2em;
+                    }
+
+                    h3 {
+                        margin-bottom: 10px;
+                        font-size: 1.6em;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .recents {
+                margin: 0 auto;
+                padding: 10px 20px;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+
+                th,
+                td {
+                    border: 2px solid black;
+                    padding: 10px;
+                }
+
+                th {
+                    background-color: #131577;
+                    color: whitesmoke;
+                    padding: 10px;
+                }
+
+                tr:nth-child(odd) {
+                    background-color: #CECECE;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="title">
+                <div class="logo"></div>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-users"></i>
+                        <a href="#">Users</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-product-hunt"></i>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-dolly"></i>
+                        <a href="#">Orders</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <a href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="title">
+                    <h2>Dashboard Overview</h2>
+                </div>
+                <div class="profile">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="user">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <h2>John Doe</h2>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Users</h3>
+                    <div class="icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <p>1,234</p>
+                </div>
+                <div class="card">
+                    <h3>Products</h3>
+                    <div class="icon">
+                        <i class="fa-brands fa-product-hunt"></i>
+                    </div>
+                    <p>434</p>
+                </div>
+                <div class="card">
+                    <h3>Orders</h3>
+                    <div class="icon">
+                        <i class="fa-solid fa-dolly"></i>
+                    </div>
+                    <p>2,546</p>
+                </div>
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <div class="icon">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <p>₹2,34,000</p>
+                </div>
+            </div>
+            <div class="recents">
+                <div class="title">
+                    <h3>Recent Orders</h3>
+                </div>
+                <table>
+                    <thead>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#0000001</td>
+                            <td>Mr. Ankit Tiwari</td>
+                            <td>02 Sept'26</td>
+                            <td>₹89,000</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>#000002</td>
+                            <td>Mr. Ayush Tiwari</td>
+                            <td>02 Sept'26</td>
+                            <td>₹1,00,000</td>
+                            <td>In-class</td>
+                        </tr>
+                        <tr>
+                            <td>#000003</td>
+                            <td>Mr. Mohammed Jari</td>
+                            <td>02 Sept'26</td>
+                            <td>₹95,000</td>
+                            <td>Pending</td>
+                        </tr>
+                        <tr>
+                            <td>#000004</td>
+                            <td>Ms. Anushka Sharma</td>
+                            <td>02 Sept'26</td>
+                            <td>₹93,000</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
