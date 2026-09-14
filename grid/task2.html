@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto auto auto;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            grid-template-areas:
+                "box1 box1 box1"
+                "box2 box3 box3"
+                "box2 box3 box3"
+                "box2 box4 box4"
+                "box5 box5 box5";
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+            }
+        }
+
+        .header {
+            background: tomato;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            background: orange;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .main {
+            background: slateblue;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .box {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card {
+            background: mediumseagreen;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "box1 box1"
+                    "box2 box2"
+                    "box3 box3"
+                    "box4 box4"
+                    "box5 box5";
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" style="grid-area: box1;">Header</div>
+        <div class="sidebar" style="grid-area: box2;">Sidebar</div>
+        <div class="main" style="grid-area: box3;">Main content</div>
+        <div class="box" style="grid-area: box4;">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+        </div>
+        <div class="footer" style="grid-area: box5;">Footer</div>
+    </div>
+</body>
+
+</html>

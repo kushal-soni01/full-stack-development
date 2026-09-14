@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: black;
+            --text-color: yellow;
+            --text-size: 20px;
+        }
+
+        .container {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            font-size: calc(var(--text-size) + 20px);
+        }
+
+        .test {
+            --primary-color: red;
+            --secondary-color: black;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-size: calc(var(--text-size) * 2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            Hello World
+        </p>
+    </div>
+    <div class="test">
+        <p>
+            Test World
+        </p>
+    </div>
+</body>
+
+</html>
